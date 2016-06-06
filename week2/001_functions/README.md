@@ -1,6 +1,10 @@
 ## Week 2/Day 1 Homework
 
-Tonight you'll be creating JavaScript functions from word problems.
+Tonight you'll be creating JavaScript functions from word problems and doing some light reading.
+
+### Reading
+
+[Read the reintroduction to JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
 
 ### Problem #1
 
