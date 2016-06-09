@@ -1,0 +1,94 @@
+@import url(https://fonts.googleapis.com/css?family=Bitter:400,700);
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #2EC4B6;
+  font-family: 'Bitter', serif;
+}
+
+.container {
+  display:flex;
+  margin: 3%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.containerCol {
+  display: flex;
+  flex-direction:column;
+  margin: 0% 3%;
+
+}
+
+p {
+  padding: 0 20px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+h1 {
+  color: #124141;
+  font-size: 50px;
+  line-height:50px;
+  margin: 0;
+
+}
+
+nav {
+  font-size: 30px;
+}
+
+ul {
+  list-style-type: none;
+  color: #23817C;
+}
+
+li {
+  display: inline;
+  margin: 8px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+main {
+  background-color: #23817C;
+  margin-bottom:20px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+h2 {
+  color: #124141;
+  margin-bottom:0;
+}
+
+h6 {
+  margin-top:0;
+  margin-bottom:0;
+
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+.addReading {
+  flex-grow: 1;
+  height:200px;
+  background-color: #124141;
+  margin-top: 0px;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  color:#23817C;
+}
+
+.addReading:first-child {
+  flex-grow: 2;
+  margin-left:0;
+}
+
+
+
+
+
