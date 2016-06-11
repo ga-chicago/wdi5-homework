@@ -40,7 +40,6 @@ var makeMiddleEarth = function () {
     }
   document.body.appendChild(meSection);
 };
-
 makeMiddleEarth();
 
 
@@ -181,7 +180,6 @@ var leaveTheShire = function () {
             //console.log(moveUL[0]); //the hobbit array
   places[1].appendChild(moveUL[0]);
 }
-
 leaveTheShire();
 
 
@@ -215,7 +213,7 @@ var forgeTheFellowShip = function () {
   //   theFellowship.appendChild(lisInRiven[i]);
   // }   //does something weird but close to what i want 
 
-  console.log(lisInRiven.length); //9!!!
+  //console.log(lisInRiven.length); //9!!!
 
 //for (var i = 0; i < lisInRiven.length; i++){
 
@@ -226,18 +224,17 @@ var forgeTheFellowShip = function () {
   for (var i = 0; i < ulsInRiven.length; i++){
        //theFellowship.innerHTML += ulsInRiven[i].innerHTML;
        theFellowship.appendChild(ulsInRiven[i]);
-   //STOP    window.alert(ulsInRiven[i].innerHTML + " has been added to your party");
+       window.alert(ulsInRiven[i].innerHTML + " has been added to your party");
   }    // says it adds hobbits but doesn't :( ITS WRITING OVER IT 
 
 
 
 
   theFellowship.appendChild(ulsInRiven[0]);
- //STOP window.alert(ulsInRiven[1].innerHTML + " has been hardcoded into your party");
+  window.alert(ulsInRiven[1].innerHTML + " has been hardcoded into your party");
 // ¯\_(ツ)_/¯
 
 }
-
 forgeTheFellowShip();
 
 //SORT OF WORKS. COME BACK
@@ -262,16 +259,14 @@ forgeTheFellowShip();
 var theBalrog = function () {
   var lis = document.getElementsByTagName('li');
 
-  console.log(lis);
-  console.log(lis[0]);
+  //console.log(lis);
+  //console.log(lis[0]);
 
   lis[0].innerHTML="Gandalf the White";
   lis[0].style.backgroundColor="ghostwhite";
   lis[0].style.border="5px grey solid";
   lis[0].style.color="#f0f0f0";
-
 }
-
 theBalrog();
 
 
@@ -292,17 +287,99 @@ theBalrog();
 var hornOfGondor = function () {
   window.alert("horn blown");
   var lis = document.getElementsByTagName('li');
-  // lis[4].innerHTML = ""; eliminates text of Boromir, as expected 
+  lis[4].innerHTML = ""; // eliminates text of Boromir, as expected
+
+// Are we supposed to do something like this, though?
+// var lis = document.querySelectorAll('#myList li');
+// for(var i=0; li=lis[i]; i++) {
+//     li.parentNode.removeChild(li);
+// }
 } 
 hornOfGondor();
 
 
+//\\//\////\\/\\/\\//\\/\\//\\\//\\\/\/\/\\\//\\/\/\\\/\/\/\/\\/\/\/\/\/\\/\/
+//\\/\/\/\\/\\\/\\\\\\/////\/\/\/\/\/\/\//\\/\/\/\/\/\\\\\\/\\\\\//\\//////\\/
+//\\\\\/\\/\/\/\\\\/\\/\\\////\\/\/\\/\/\\/\/\\\/\/\\/\\\/\/\/\/\/\/\/////\\\\
+//\/\//\/\/\/\\\/\\\/\\\\/\\/\\/\\/\/\/\/\/\\\\\\///\\\\/\/\/\\\/\/\/\\\\\/\\/
+
+// #### Part 10
+// ```js
+// var itsDangerousToGoAlone = function (){
+//    // take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+//    // add a div with an id of `'mount-doom'` to `Mordor`
+// };
+// ```
+
+// frodo and sam are in the second ul of the fellowship div in rivendale
+
+var itsDangerousToGoAlone = function () {
+  var boys = document.getElementsByTagName('li');
+  var places = document.getElementsByTagName('article');
+  places[2].appendChild(boys[5]);
+  places[2].appendChild(boys[5]); //takes out guy before, so -1 
+  
+  var doom = document.createElement('div');
+  doom.id = "mount-doom";
+  places[2].appendChild(doom);
+}
+itsDangerousToGoAlone();
 
 
+//\\//\////\\/\\/\\//\\/\\//\\\//\\\/\/\/\\\//\\/\/\\\/\/\/\/\\/\/\/\/\/\\/\/
+//\\/\/\/\\/\\\/\\\\\\/////\/\/\/\/\/\/\//\\/\/\/\/\/\\\\\\/\\\\\//\\//////\\/
+//\\\\\/\\/\/\/\\\\/\\/\\\////\\/\/\\/\/\\/\/\\\/\/\\/\\\/\/\/\/\/\/\/////\\\\
+//\/\//\/\/\/\\\/\\\/\\\\/\\/\\/\\/\/\/\/\/\\\\\\///\\\\/\/\/\\\/\/\/\\\\\/\\/
 
 
+// #### Part 11
+// ```js
+//  var weWantsIt = function () {
+//    // Create a div with an id of `'gollum'` and add it to Mordor
+//    // Remove `the ring` from `Frodo` and give it to `Gollum`
+//    // Move Gollum into Mount Doom
+// };
+// ```
+
+var weWantsIt = function () {
+  var gol = document.createElement('div');
+  gol.id = 'gollum'; 
+  
+  var places = document.getElementsByTagName('article');
+  places[2].appendChild(gol);
+  
+  var ring = document.getElementById('the-ring');
+  gol.appendChild(ring);
+
+  var doom = document.getElementById('mount-doom');
+  doom.appendChild(gol);
+}
+weWantsIt();
 
 
+//\\//\////\\/\\/\\//\\/\\//\\\//\\\/\/\/\\\//\\/\/\\\/\/\/\/\\/\/\/\/\/\\/\/
+//\\/\/\/\\/\\\/\\\\\\/////\/\/\/\/\/\/\//\\/\/\/\/\/\\\\\\/\\\\\//\\//////\\/
+//\\\\\/\\/\/\/\\\\/\\/\\\////\\/\/\\/\/\\/\/\\\/\/\\/\\\/\/\/\/\/\/\/////\\\\
+//\/\//\/\/\/\\\/\\\/\\\\/\\/\\/\\/\/\/\/\/\\\\\\///\\\\/\/\/\\\/\/\/\\\\\/\\/
 
+// #### Part 12
+// ```js
+// var thereAndBackAgain = function () {
+//    // remove `Gollum` and `the Ring` from the document
+//    // Move all the `hobbits` back to `the shire`
+// };
+// ```
 
+var thereAndBackAgain = function () {
+  var gol = document.getElementById('gollum');
+  gol.parentNode.removeChild(gol);
 
+  var hobs = document.getElementsByClassName('hobbit');
+  console.log(hobs.length);
+  var places = document.getElementsByTagName('article');
+
+  for (var i = 0; i < hobs.length; i++) {
+    places[0].appendChild(hobs[i]);
+  }
+}
+thereAndBackAgain();
