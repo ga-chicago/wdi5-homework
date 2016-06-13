@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+console.log("Linked.");
+
+// Dramatis Personae
+=======
+<<<<<<< HEAD
 
 
 console.log("Linked.");
@@ -10,7 +15,7 @@ console.log("Linked.");
 console.log("Linked.");
 
 // Dramatis Personae
->>>>>>> e34d41686e3eed0003ae81b29675383e8f0bb08a
+
 var hobbits = [
   'Frodo Baggins',
   'Samwise \'Sam\' Gamgee',
@@ -28,6 +33,8 @@ var buddies = [
 
 var lands = ['The Shire', 'Rivendell', 'Mordor'];
 var body = document.body;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -302,6 +309,7 @@ thereAndBackAgain();
 
 
 =======
+>>>>>>> 336b874f5209f86b1367cd705feac0774216835a
 ///////DEX STARTS HERE
 //// PART 1: The Journey Begins
 //////////
@@ -444,4 +452,7 @@ var thereAndBackAgain = function () {
     document.getElementById('Shire').appendChild(document.getElementsByClassName('hobbit')[sh]);
   };   
 };
+<<<<<<< HEAD
+=======
 >>>>>>> e34d41686e3eed0003ae81b29675383e8f0bb08a
+>>>>>>> 336b874f5209f86b1367cd705feac0774216835a
