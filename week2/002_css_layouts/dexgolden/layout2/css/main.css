@@ -1,0 +1,33 @@
+body {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid black;
+}
+
+ul {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  color: blue;
+  text-align: right;
+  
+}
+
+li {
+  margin: 10px;
+}
+
+
+
+/*.topList {
+
+
+color: yellow;
+
+}*/

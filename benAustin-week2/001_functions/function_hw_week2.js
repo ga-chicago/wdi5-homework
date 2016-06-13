@@ -2,8 +2,10 @@
 
 
 
-    // CALCULATE AGE BASED ON BIRTH YEAR AND CURRENT YEAR
 
+
+    // CALCULATE AGE BASED ON BIRTH YEAR AND CURRENT YEAR
+    
 var birthYr = prompt("What year were you born?");
 var getYr = new Date();
 var currentYr = getYr.getFullYear();
@@ -15,6 +17,8 @@ function calculateAge(birthYr, currentYr) {
 }
 
 console.log(calculateAge(birthYr, currentYr));
+
+
 
 
 
