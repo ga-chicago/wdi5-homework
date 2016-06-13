@@ -3,7 +3,7 @@ console.log("Linked.");
 
 // Dramatis Personae
 var hobbits = [
-  'Frodo Baggins',
+  'Frodoa Baggins',
   'Samwise \'Sam\' Gamgee',
   'Meriadoc \'Merry\' Brandybuck',
   'Peregrin \'Pippin\' Took'
@@ -203,7 +203,7 @@ var forgeTheFellowShip = function () {
   for(var f = 0; f < 9; f++){
     
 
-    // alert(document.getElementsByTagName("li")[0].textContent + " has joined the The Fellowship"); 
+  alert(document.getElementsByTagName("li")[0].textContent + " has joined the The Fellowship"); 
     
     // ^^^unmessage above to make sure it works when running the project^^^
 
@@ -214,7 +214,7 @@ var forgeTheFellowShip = function () {
   };
 };
 
-forgeTheFellowShip()
+forgeTheFellowShip();
 
 
 ////Part 8
@@ -297,7 +297,7 @@ var weWantsIt = function () {
    document.getElementById('mount-doom').appendChild(gollum);
 };
 
-weWantsIt();
+weWantsIt()
 
 ////Part 12
 ///////////
