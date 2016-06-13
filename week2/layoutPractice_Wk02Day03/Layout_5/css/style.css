@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 html, body {
   margin: 0;
   padding: 0;
@@ -108,3 +109,10 @@ h1 {
 h3 {
   padding: 0;
 }
+=======
+var someReallyBigObject = { red: 'red', blue: 'blue', orange: ["jim", "barry", "kate", {billFrisell: { happy: "Hayppy Dog Happy Man", joyful: ["taco", "tuneskis", {talk: function(){return "WOOF WOOF WOOF"}}]}}]}
+​
+// print out "Hayppy Dog Happy Man", taco,  and Woof Woof Woof
+
+console.log(someReallyBigObject.orange[3][billFrisell]);
+>>>>>>> 336b874f5209f86b1367cd705feac0774216835a
