@@ -7211,4 +7211,7 @@ var englishMap = tagMap.filter(function(language) {
 
 console.log("englishMap: " + englishMap.length);
 
-
+for (var prop in englishMap) {
+  console.log(prop, englishMap[prop]);
+  console.log("\n");
+}
