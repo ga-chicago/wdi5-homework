@@ -224,7 +224,7 @@ var forgeTheFellowShip = function () {
   for (var i = 0; i < ulsInRiven.length; i++){
        //theFellowship.innerHTML += ulsInRiven[i].innerHTML;
        theFellowship.appendChild(ulsInRiven[i]);
-       window.alert(ulsInRiven[i].innerHTML + " has been added to your party");
+       window.alert(ulsInRiven[i].textContent + " has been added to your party");
   }    // says it adds hobbits but doesn't :( ITS WRITING OVER IT 
 
 
@@ -288,6 +288,8 @@ var hornOfGondor = function () {
   window.alert("horn blown");
   var lis = document.getElementsByTagName('li');
   lis[4].innerHTML = ""; // eliminates text of Boromir, as expected
+
+
 
 // Are we supposed to do something like this, though?
 // var lis = document.querySelectorAll('#myList li');
