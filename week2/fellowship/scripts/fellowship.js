@@ -15,8 +15,7 @@ console.log("Linked.");
 console.log("Linked.");
 
 // Dramatis Personae
->>>>>>> e34d41686e3eed0003ae81b29675383e8f0bb08a
->>>>>>> 336b874f5209f86b1367cd705feac0774216835a
+
 var hobbits = [
   'Frodo Baggins',
   'Samwise \'Sam\' Gamgee',

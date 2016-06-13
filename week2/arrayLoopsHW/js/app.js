@@ -7211,11 +7211,10 @@ var englishMap = tagMap.filter(function(language) {
 
 console.log("englishMap: " + englishMap.length);
 
-<<<<<<< HEAD
 
 =======
 for (var prop in englishMap) {
   console.log(prop, englishMap[prop]);
   console.log("\n");
 }
->>>>>>> 336b874f5209f86b1367cd705feac0774216835a
+
