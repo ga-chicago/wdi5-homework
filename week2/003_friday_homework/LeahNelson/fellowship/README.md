@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 ## Trip To MorDOMr
-=======
-<<<<<<< HEAD
-  ## Trip To MorDOMr
-=======
-## Trip To MorDOMr
->>>>>>> e34d41686e3eed0003ae81b29675383e8f0bb08a
->>>>>>> 336b874f5209f86b1367cd705feac0774216835a
 
 #### Learning Objectives
 
