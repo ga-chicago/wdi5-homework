@@ -45,9 +45,9 @@ console.log(animals);
 console.log(animalLowerCase);
 
 
-var bear = animals.filter(function(animal) {
+var bears = animals.filter(function(animal) {          // let's find all 'Bear's
   return animal === 'Bear';
 })
 
 console.log(animals);
-console.log(bear);
+console.log(bears);
