@@ -1,0 +1,113 @@
+body {
+  background-color: yellow;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.logo {
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  
+  margin-top: 5%;  
+  border: 1px solid black;
+  
+  /*max-width: 25%;
+  width: 300px;
+  height: 150px;
+  max-height: 150px; */
+
+  height: 150px; 
+    width: auto; 
+    max-width: 225px; 
+    max-height: 300px;
+  
+  background-color: yellow;
+  background-size: cover;
+  background-image: url('http://i.cdn-surfline.com/surfnews/images/2012/03_march/destination_lakshadweep/full/Lakshadweep-1680.jpg');
+}
+
+.sidePanel {
+  /*display: flex;*/
+  flex-direction: column;
+
+  width: 20%;
+  background-color: red;
+  height: 100%;
+  padding: 0 0 100% 0;
+
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  list-style: none;
+  margin: 5px;
+}
+
+.wide {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  width: 100%;
+  justify-content: space-around;
+
+}
+
+.topper {  
+  margin-top: 90px;
+  
+  /*width: 150%;*/
+  border: 2px solid black;
+  height: 33px;
+}
+
+.jumbo {
+  display: flex;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid black;
+  width: 600px;
+  height: 400px;
+}
+
+.triplet {
+  width: 100%;
+  border: 2px solid black;
+  margin-top: 10px;
+}
+
+.horzDisplay {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.bottom1 {
+  width: 100%;
+  border: 2px solid black;
+  margin-top: 10px;
+}
+
+.bottom2 {
+  width: 100%;
+  border: 2px solid black;
+  margin-top: 10px;
+}
+
+.trip1, .trip2, .trip3 {
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto; 
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+
