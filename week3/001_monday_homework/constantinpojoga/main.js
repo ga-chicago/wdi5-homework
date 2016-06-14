@@ -91,13 +91,15 @@ console.log(longest(["Nothing", "takes", "the", "taste", "out", "of", "peanut", 
 // repMaster("I finished this practice", toUpperCase);
 // "I FINISHED THIS PRACTICE proves that I am the rep MASTER!"
 
+function toUpperCase(someString){
+  return someString.toUpperCase();
+}
+
 function repMaster (param, func) {
-  // if (func && typeof func == 'function') {
    return func(param) + "  proves that I am the rep MASTER!";
-   //} else return param[func]();
 }
 console.log(repMaster("Never give your heart to a blockhead", wordReverse));
-//console.log(repMaster("I finished this practice", toUpperCase));
+console.log(repMaster("I finished this practice", toUpperCase));
 
 
 
