@@ -11,7 +11,7 @@ function lengths(arrayOfStrings) {
 
   return arrayNum;
 
-}
+} 
 
 // Problem 2
 
