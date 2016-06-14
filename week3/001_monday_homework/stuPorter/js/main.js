@@ -31,17 +31,8 @@ function lengths(arrayOfStrings) {
 // with the multiTable you want to push the the mult to get the first miltitable
 // and then you will need a for loop
 
-function transmogrifier(s, t, u) {
-  
-  var multiTable = [];
-  
-  var mult = s * t;
-  multiTable.push(mult);
-  for (i = 0; i < (u - 1); i++) {
-    mult = mult * mult;
-    multiTable.push(mult);
-  }
-  console.log(multiTable);
+function transmogrifier (one, two, three) {
+  return Math.pow((one * two), three);
 }
 
 transmogrifier(5, 5, 2);
