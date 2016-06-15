@@ -42,6 +42,7 @@ var makeMiddleEarth = function(){
 
   body.appendChild(middleEarth);
 }
+makeMiddleEarth();
 
 ////////////////////
 //   PART 2
