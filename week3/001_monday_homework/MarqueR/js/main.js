@@ -106,10 +106,10 @@ longest(magic);
 
 
 // 7.)
-// Function takes an input and a function //
-// as arguments and ogs result of the     //
-// input being passed to the function     //
-////////////////////////////////////////////
+// Outer function takes an input and an function  //
+// inner function as arguments and logs result of //
+// the input being passed to the inner function   //
+////////////////////////////////////////////////////
 
 function repMaster(inputed, functioneered) {
   console.log(functioneered(inputed) + 'proves that I am the rep MASTER!');
