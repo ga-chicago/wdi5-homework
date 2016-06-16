@@ -186,6 +186,7 @@ function repMaster (inp, fun) {
   return repString; 
 }
 
+// console.log(repMaster(shortString, toUpperCase));   --> this wouldn't work because it's a method, not a function. 
 console.log(repMaster(shortString, letterReverse));
 console.log(repMaster(shortString, wordReverse));
 
