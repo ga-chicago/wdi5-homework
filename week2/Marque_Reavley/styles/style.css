@@ -1,0 +1,102 @@
+html, body  {
+  margin: 10px;
+  padding: 0px;
+  background-color: grey;
+}
+
+.container  {
+  display: flex;
+  flex-direction: row;
+  align-items: ;
+  padding: 5px 5px;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+}
+
+.col-3 {
+  background-color: black;
+  height: 50px;
+  width: 300px;
+  float: left;
+  flex-flow: wrap;
+  border: 2px solid black;
+}
+
+.col-7 {
+  width: 100%;
+  float: left;
+  flex-flow: wrap;
+}
+
+.col-1 {
+  background-color: black;
+  height: 50px;
+  width: 50px;
+  float: left;
+  flex-flow: wrap;
+  border: 2px solid black;
+}
+
+.col-1 {
+  background-color: black
+  height: 50px;
+  width: 50px;
+  float: left;
+  flex-flow: wrap;
+  border: 2px solid black;
+}
+
+.container  {
+  display: block;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+
+.item {
+  flex-direction: column;
+  min-height: auto;
+  min-width: auto;  
+  margin: 5px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  font-weight: 600;
+}
+
+.item:last-child {
+  background-color: black;
+}
+
+.item {
+  height: 50px;
+  width: 100px;
+  flex-grow: 1;
+  order: 1;
+}
+
+
+.container  {
+    display: block;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+
+.box {
+
+  flex-direction: row;
+  display: flex;
+  flex-flow:  row nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.main {
+  background-color: black;
+  height: 600px;
+  width: 100%;
+  float: left;
+  flex-flow: wrap;
+  border: 2px solid black;
+}

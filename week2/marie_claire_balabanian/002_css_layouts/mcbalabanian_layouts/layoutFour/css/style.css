@@ -1,0 +1,94 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+} 
+
+.item {
+  background-color: black;
+}
+
+.item:first-child {
+  margin-right: auto;
+  height: 50px;
+  width: 100px;
+}
+
+.item:nth-child(2) {
+  margin-right: 10px;
+  height: 25px;
+  width: 100px;
+}
+
+.item:nth-child(3) {
+  margin-right: 10px;
+  height: 25px;
+  width: 100px;
+}
+
+.item:nth-child(4) {
+  height: 25px;
+  width: 100px;
+}
+
+.main {
+  background-color: black;
+  height: 500px;
+  margin: 0px 20px 20px 20px;
+}
+
+.headertwo {
+  background-color: black;
+  height: 25px;
+  width: 125px;
+  margin: 50px 20px 20px 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0px 20px 50px 20px;
+}
+
+.column {
+  height: 200px;
+}
+
+.column:first-child {
+  width: 50%;
+  background-color: black;
+  margin-bottom: 40px;
+}
+
+.column:nth-child(2) {
+  width: 23%;
+  background-color: black;
+  margin-bottom: 40px;
+}
+
+.column:nth-child(3) {
+  width: 23%;
+  background-color: black;
+  margin-bottom: 40px;
+}
+
+.column:nth-child(4) {
+  width: 50%;
+  background-color: black;
+}
+
+.column:nth-child(5) {
+  width: 23%;
+  background-color: black;
+}
+
+.column:nth-child(6) {
+  width: 23%;
+  background-color: black;
+}
