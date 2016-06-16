@@ -30,7 +30,7 @@ function assignGrade (score) {
 
 assignGrade();
 
-
+//var grade = assignGrade(x);
 for(var x = 60; x < 101; x++){
   var grade = assignGrade(x);
   console.log('For ' +  x  + ' you got a' );

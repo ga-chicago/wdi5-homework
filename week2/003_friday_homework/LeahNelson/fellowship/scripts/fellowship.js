@@ -65,6 +65,7 @@ var makeHobbits = function () {
            // give each hobbit a class of `hobbit`
         listHobbits.className = "hobbit";
         addHobbits.appendChild(listHobbits);
+        listHobbits.id = "the-hobbits";
         listHobbits.innerHTML = hobbits[i];
       };
       
@@ -82,11 +83,12 @@ var keepItSecretKeepItSafe = function () {
    // create a div with an id of `'the-ring'`
    var safe = document.createElement('div');
    safe.id = "the-ring";
-   safe.className = "magic-imbued-jewelry"
+   safe.className = "magic-imbued-jewelry";
    document.getElementsByClassName('hobbit')[0].appendChild(safe);
 
    // give the div a class of `'magic-imbued-jewelry'`
    // add the ring as a child of `Frodo`
+   console.log(safe);
 };
 keepItSecretKeepItSafe();
 
@@ -100,6 +102,7 @@ var makeBuddies = function () {
    for (var i = 0; i < buddies.length; i++){
     var listBuddies = document.createElement('li');
     addBuddies.appendChild(listBuddies);
+    listBuddies.id = "the-buddies";
     listBuddies.innerHTML = buddies[i]; 
 
     
@@ -141,23 +144,28 @@ var forgeTheFellowShip = function () {
    // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
    // after each character is added make an alert that they // have joined your party
    for (var i = 0; i < buddies.length; i++){
-    var listBuddies = document.createElement('li');
+    var listBuddies = document.getElementById("the-buddies");
     makeFellowship.appendChild(listBuddies);
     listBuddies.innerHTML = buddies[i]; 
     alert( buddies[i] + ' has joined your party');
   };
   for (var i = 0; i < hobbits.length; i++) {
-        var listHobbits = document.createElement('li');
+        var listHobbits = document.getElementById("the-hobbits");
         makeFellowship.appendChild(listHobbits);
         listHobbits.innerHTML = hobbits[i];
         alert( hobbits[i] + ' has joined your party');
       };
 
+   var safe = document.createElement('div');
+   safe.id = "the-ring";
+   safe.className = "magic-imbued-jewelry";
+   document.getElementsByClassName('hobbit')[0].appendChild(safe);   
+
 };
 
 //  adds each hobbit anf buddie but now has 2 of each on the page.. research write function to remove from the shire as they are added.
 
-// forgeTheFellowShip();
+forgeTheFellowShip();
 
 var theBalrog = function () {
    // change the `'Gandalf'` text to `'Gandalf the White'`
@@ -168,3 +176,63 @@ var theBalrog = function () {
    // apply the following style to the element, make the // background 'white', add a grey border
 };
 theBalrog();
+
+var hornOfGondor = function () {
+   // pop up an alert that the horn of gondor has been blown
+   alert(' The horn of gondor has been blown, Boromir has been killed by the Uruk-hai!')
+   // Boromir's been killed by the Uruk-hai!
+   // Remove `Boromir` from the Fellowship
+      // getBoromir.splice(4,1);
+   document.getElementById('rivendell').getElementsByTagName("li")[4].innerHTML = " ";
+};
+hornOfGondor();
+
+var itsDangerousToGoAlone = function (){
+   // take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+   var moveFrodo = document.getElementById("the-fellowship").getElementsByTagName("li")[5];
+   var moveSam = document.getElementById("the-fellowship").getElementsByTagName("li")[6];
+   // add a div with an id of `'mount-doom'` to `Mordor`
+   var mountDoom = document.createElement('div');
+   mountDoom.id = "mount-doom";
+
+   mountDoom.style.border = '2px solid black';
+   document.getElementById("Mordor").appendChild(moveFrodo);
+   document.getElementById("Mordor").appendChild(moveSam);
+   document.getElementById("Mordor").appendChild(mountDoom);
+   
+   console.log(moveFrodo);
+};
+itsDangerousToGoAlone();
+
+var weWantsIt = function () {
+   // Create a div with an id of `'gollum'` and add it to Mordor
+   var makeGollum = document.createElement('div');
+   makeGollum.id = "gollum";
+   makeGollum.style.border = '2px solid white';
+   document.getElementById("Mordor").appendChild(makeGollum);
+   var theRing = document.getElementById("the-ring");
+   // Remove `the ring` from `Frodo` and give it to `Gollum`
+   makeGollum.appendChild(theRing);
+   // Move Gollum into Mount Doom
+   document.getElementById("mount-doom").appendChild(makeGollum);
+};
+weWantsIt();
+
+var thereAndBackAgain = function () {
+   // remove `Gollum` and `the Ring` from the document
+   var makeGollum = document.createElement('div');
+   document.getElementById("mount-doom").removeChild(document.getElementById("gollum"));
+   // Move all the `hobbits` back to `the shire`
+
+   for (var i = 0; i < hobbits.length; i++) {
+        var listHobbits = document.getElementById("the-hobbits");
+        makeFellowship.appendChild(listHobbits);
+        listHobbits.innerHTML = hobbits[i];
+        alert( hobbits[i] + ' has joined your party');
+      };
+
+};
+thereAndBackAgain();
+
+
+
