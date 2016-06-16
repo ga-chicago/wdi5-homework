@@ -1,0 +1,57 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  margin: 10px;
+  height: 60px;
+}
+
+.item {
+  background-color: black;
+  margin: 5px;
+}
+
+.item:first-child {
+  width: 300px;
+  margin-right: auto;
+}
+
+.item:nth-child(2) {
+  width: 75px;
+}
+
+.item:nth-child(3) {
+  width: 75px;
+}
+
+.main {
+  display: flex;
+  margin: 10px;
+  height: 450px;
+}
+
+.content {
+  background-color: black;
+  width: 100%;
+  margin: 5px;
+}
+
+.container {
+  display: flex;
+  height: 200px;
+  margin: 10px;
+}
+
+.column {
+  width: 25%;
+  margin: 5px;
+  background-color: black;
+}
+
+.footer {
+  background-color: black;
+  height: 10vh;
+}
