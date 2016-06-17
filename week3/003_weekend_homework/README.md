@@ -12,7 +12,7 @@ This will require you to check out the jQuery API documentation at times.
 
 ## Part 2: Project 1 Planning
 
-See the GitBook for details on the project as a whole. It is a game. Over this weekend, outline your plan for the game and come up with some wireframes and think about how you will implement it using HTML, CSS, and JavaScript. The only deliverables for this part of the project due Monday are your written plans and any wireframes (or other assets) you'll need to describe the project. 
+See the [GitBook for details on the project as a whole](https://billpatrianakos.gitbooks.io/wdi-bandits/content/03_intermediate_front_end/project.html). It is a game. Over this weekend, outline your plan for the game and come up with some wireframes and think about how you will implement it using HTML, CSS, and JavaScript. The only deliverables for this part of the project due Monday are your written plans and any wireframes (or other assets) you'll need to describe the project. 
 
 __You do not need to turn this in in this homework repository! We will speak with each of you individually and go over these plans and wireframes during one on one time Monday at the end of the day.__
 
