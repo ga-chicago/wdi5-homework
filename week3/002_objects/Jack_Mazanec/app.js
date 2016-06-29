@@ -1,4 +1,4 @@
-function turtle(name, color, weapon, attackStrength) {
+function Turtle(name, color, weapon, attackStrength) {
   this.name = name;
   this.color = color;
   this.weapon = weapon;
@@ -16,16 +16,16 @@ turtle.prototype.strengthBoost = function(strengthBoost) {
 } 
 
 
-var Donatello = new turtle('Donatello', 'purple','bo staff',4);
+var Donatello = new Turtle('Donatello', 'purple','bo staff',4);
 Donatello.catchPhrase('Uh...');
 
-var Michelangelo  = new turtle('Michelangelo ', 'orange','nunchucks',3);
+var Michelangelo  = new Turtle('Michelangelo ', 'orange','nunchucks',3);
 Michelangelo.catchPhrase('Bodacious');
 
-var Leonardo = new turtle('Leonardo', 'blue','akimbo takana',2);
+var Leonardo = new Turtle('Leonardo', 'blue','akimbo takana',2);
 Leonardo.catchPhrase('Radical!');
 
-var Raphael = new turtle('Raphael', 'red','akimbo sai',1);
+var Raphael = new Turtle('Raphael', 'red','akimbo sai',1);
 Raphael.catchPhrase('Totally tubular, dude!');
 
 console.log(Leonardo.strengthBoost(59));

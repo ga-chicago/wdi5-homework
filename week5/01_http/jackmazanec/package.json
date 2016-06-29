@@ -1,0 +1,11 @@
+{
+  "name": "jackmazanec",
+  "version": "1.0.0",
+  "description": "Homework week 5 tuesday",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jack Mazanec",
+  "license": "ISC"
+}
