@@ -1,0 +1,47 @@
+body {
+  background-color: #87ff3c;
+  font-family: 'VT323', monospace;
+}
+
+h1 {
+  font-size: 60px;
+   margin: 10px;
+}
+
+.turtleDiv {
+  font-size: 100px;
+  padding: 1%;
+  margin: .5%;
+  border-radius: 15px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  font-size:30px;
+  font-family: 'VT323', monospace;
+  border-radius: 10px;
+}
+
+ul {
+  display:inline;
+  list-style: none;
+  padding: 1%;
+  margin: 15px;
+}
+
+li {
+  display:inline;
+  margin: 12px;
+}
+
+#stuffGoesHere {
+  display:flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
