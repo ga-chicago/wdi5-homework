@@ -1,36 +1,30 @@
-<<<<<<< HEAD
-## Trip To MorDOMr
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-## Trip To MorDOMr
-=======
-<<<<<<< HEAD
->>>>>>> d337b0ad9fad15bac6f1a9682a757e68735230b2
-  ## Trip To MorDOMr
-=======
-## Trip To MorDOMr
->>>>>>> e34d41686e3eed0003ae81b29675383e8f0bb08a
->>>>>>> 336b874f5209f86b1367cd705feac0774216835a
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf4fb15dfb43afb6bee0d6e9f1e2d88a860380
->>>>>>> d337b0ad9fad15bac6f1a9682a757e68735230b2
+## Trip To MorDOMr using jQuery
 
 #### Learning Objectives
 
-- Practice using 'Vanilla' JavaScript to manipulate the DOM
+- Practice using **jQuery** to manipulate the DOM
 
 We are going to take a trip from the Shire, through Rivendell, across Middle
 Earth, and into the heart of Mordor itself, Mount Doom. Pack up, because we're
 going on an adventure.
+
+Your goal is to use jQuery to complete this adventure! Instead of using traditional
+Javascript like the weekend's prompt, you should use jQuery selectors to manipulate the DOM. This second pass on Fellowship should give you a greater appreciation of the ease and simplicity of jQuery compared to standard Javascript.
 
 
 #### Directions
 
 1. Check out [`scripts/fellowship.js`](scripts/fellowship.js). This is where you will work. Starter data has been provided.
 2. Define and call the functions outlined below.
+
+
+#### Resources
+
+- [jQuery Selector Reference](https://api.jquery.com/category/selectors/)
+- [jQuery Cheat Sheet Reference](http://overapi.com/jquery/)
+- [jQuery Succinctly](http://weeklymirror.com.np/files/download/jQuery_Succinctly.pdf)
+- [jQuery Basics](http://jqfundamentals.com/chapter/jquery-basics)
+- [Try jQuery (Interactive)](http://try.jquery.com/)
 
 ===
 
@@ -142,9 +136,3 @@ var thereAndBackAgain = function () {
    // Move all the `hobbits` back to `the shire`
 };
 ```
-
-
-#### Resources
-
-- [DOM Reference](https://developer.mozilla.org/en-US/docs/DOM/DOM_Reference)
-- [DOM Cheatsheet](http://christianheilmann.com/stuff/JavaScript-DOM-Cheatsheet.pdf)
