@@ -1,5 +1,9 @@
 var http = require('http');
 
+function printError(error) {
+  console.error(error.message);
+};
+
 function getMovies(movieTitle) {
   var request = http.get('http://www.omdbapi.com/?t=' + movieTitle + '&y=&plot=short&r=json', function(movieRes) { 
 
@@ -24,6 +28,9 @@ function getMovies(movieTitle) {
     });
 
   });
+
+  request.on('error', printError)
+
 }
 
 module.exports.get = getMovies;

@@ -4,4 +4,4 @@ var movie               = require('./movie'),
 threeFavoriteMovies.forEach(function(film) {
   var movieTitle = film.split(' ').join('+');
   movie.get(movieTitle);
-})
+});
