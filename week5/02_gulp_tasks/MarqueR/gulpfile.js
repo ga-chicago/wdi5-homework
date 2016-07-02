@@ -20,6 +20,7 @@ gulp.task('server', function() {
 
   gulp.watch(['./gulpfile.js', './src/index.js'], function() {
     server.start.bind(server)()
+    console.log('server is running')
   })
 })
 

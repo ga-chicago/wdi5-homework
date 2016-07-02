@@ -1,4 +1,4 @@
-//  NODE SERVER
+e//  NODE SERVER
 //  ===========
 
 //  Dependencies
@@ -16,7 +16,7 @@ app.use(express.static(__dirname + '/public'));
 //  -------------------------------------------
 
 app.get('/?', function(req, res, next) {
-  res.sendFil(__dirname + 'public.index.html');
+  res.sendFile(__dirname + 'public.index.html');
 });
 
 console.log('Now we\'re managing tasks and kicking the ass of all the task devils and other small evil creatures!');
