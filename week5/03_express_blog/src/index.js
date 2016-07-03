@@ -4,6 +4,7 @@ var express = require('express'),
     exphbs  = require('express-handlebars'),
     fs      = require('fs'),
     bodPars = require('body-parser');
+    handlebars = require('handlebars');
 
 
 // Handlebars
@@ -23,7 +24,7 @@ app.use(express.static(__dirname + '/public'));
 // app.use(bodPars.json()); //supports json encoded bodies
 // app.use(bodPars.urlencoded({extended:true})); //supports encoded bodies
 
-// exphbs.registerHelper('makeExcerpt', function(){
+// Handlebars.registerHelper('makeExcerpt', function(){
 //   var words = [];
 //     var tempString = "";
 //     var blurb ="";
@@ -44,6 +45,29 @@ app.use(express.static(__dirname + '/public'));
 //   blurb += "...";
 //   return blurb;
 // }) 
+
+function makeExcerpt(content){
+
+  var words = [];
+    var tempString = "";
+    var blurb ="";
+
+    for (var i = 0; i < content.length; i++) {
+      if (content[i]!==" "  || words.length >= 15){
+        tempString += content[i];
+      }
+      else {
+        words.push(tempString + " ");
+        tempString = "";
+      }
+    }
+    
+    for (var m = 0; m < words.length; m++){
+      blurb += words[m];
+    }
+  blurb += "...";
+  return blurb;
+}
 
 
 // route for BLOG POSTS... Confusing!
@@ -67,6 +91,10 @@ app.route('/blogs/:id/?')   //whats it looking for here
 
   });
 
+function makeBlurb() {
+  return "Hello!";
+}
+
 // Homepage
 app.route('/?')
   .get(function(req, res, next) {
@@ -80,7 +108,7 @@ app.route('/?')
       pageTitle: 'Home',
       author: 'Cool Blog',
       blogs: JSON.parse(blogs.toString()),  //why is this here, and not a few lines up
-      // blurb: makeExcerpt(blogs[id].body)
+      body: blogs.body
 
     });
   }) 
