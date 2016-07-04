@@ -46,28 +46,38 @@ app.use(express.static(__dirname + '/public'));
 //   return blurb;
 // }) 
 
-function makeExcerpt(content){
+// function makeExcerpt(content){
 
-  var words = [];
-    var tempString = "";
-    var blurb ="";
+//   var words = [];
+//     var tempString = "";
+//     var blurb ="";
 
-    for (var i = 0; i < content.length; i++) {
-      if (content[i]!==" "  || words.length >= 15){
-        tempString += content[i];
-      }
-      else {
-        words.push(tempString + " ");
-        tempString = "";
-      }
-    }
+//     for (var i = 0; i < content.length; i++) {
+//       if (content[i]!==" "  || words.length >= 15){
+//         tempString += content[i];
+//       }
+//       else {
+//         words.push(tempString + " ");
+//         tempString = "";
+//       }
+//     }
     
-    for (var m = 0; m < words.length; m++){
-      blurb += words[m];
-    }
-  blurb += "...";
-  return blurb;
+//     for (var m = 0; m < words.length; m++){
+//       blurb += words[m];
+//     }
+//   blurb += "...";
+//   return blurb;
+// }
+
+function lineBreak(content){
+  var tempString = "";
+  var arr = content.split('\r\n');
+  for (var i = 0; i < arr.length; i++) {
+    tempString += arr[i] + '<br/><br/>';
+  }
+  return tempString;
 }
+
 
 
 // route for BLOG POSTS... Confusing!
@@ -77,6 +87,7 @@ app.route('/blogs/:id/?')   //whats it looking for here
         blogs = fs.readFileSync(__dirname + '/db/blogs.json');
 
     blogs = JSON.parse(blogs.toString()); 
+        console.log(blogs);
 
 
     res.render('readMore', {
@@ -84,16 +95,12 @@ app.route('/blogs/:id/?')   //whats it looking for here
       title: blogs[id].title,
       author: blogs[id].author,
       publishedOn: blogs[id].publishedOn,
-      body: blogs[id].body,
-      blurb: makeExcerpt(blogs[id].body)
+      body: lineBreak(blogs[id].body)
 
     });
 
   });
 
-function makeBlurb() {
-  return "Hello!";
-}
 
 // Homepage
 app.route('/?')
