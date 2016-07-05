@@ -1,0 +1,9 @@
+
+<ul class="blogposts">
+  {{#each posts}}
+    <li> 
+      <a href="/posts/{{@index}}"> {{this.title}} </a>
+      <p> by {{this.author}} - {{this.publishedOn}} </p>
+    </li>
+  {{/each}}
+</ul>

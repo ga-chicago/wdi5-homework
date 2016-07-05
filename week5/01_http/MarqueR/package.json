@@ -1,0 +1,14 @@
+{
+  "name": "omdbrequest",
+  "version": "1.0.0",
+  "description": "making node.js request to OMDB API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marque Reavley",
+  "license": "MIT",
+  "devDependencies": {
+    "http": "0.0.0"
+  }
+}
