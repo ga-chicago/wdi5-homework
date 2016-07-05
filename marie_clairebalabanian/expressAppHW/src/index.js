@@ -12,6 +12,7 @@ var fs     = require('fs');
 
 
 app.engine('hbs', exphbs({
+  defaultLayout: 'main',
   partialsDir: __dirname + '/views/partials',
   layoutsDir: __dirname + '/views/layouts',
   extname:    '.hbs'
@@ -26,17 +27,47 @@ app.use(express.static(__dirname + '/public'));
 
 
 
-// Define the todos route
-app.route('/posts/:id/?')//anything that starts iwth colon is a variable.
+// blog posts 
+app.route('/posts/:id/?')
   .get(function(req, res, next) {
-    var id = parseInt(req.params.id);// must match what's in the app.route(). we parse to number so we can use as index #. anything from url returns a string.
+    var id = parseInt(req.params.id);// must match what's in the app.route(). 
     posts  = fs.readFileSync(__dirname + '/db/posts.json');
 
-    posts = JSON.parse(posts.toString()); // Turn todos file into JS object
+    posts  = JSON.parse(posts.toString()); // Turn posts.json file into JS object
 
     res.render('detail', {
-      pageTitle: posts[id].name,
+      pageTitle: posts[id].title,
       item:      posts[id] 
+    });
+  });
+
+
+
+// login route
+app.route('/login/?')
+  .get(function(req, res, next) {
+    var posts  = fs.readFileSync(__dirname + '/db/posts.json');
+
+    posts  = JSON.parse(posts.toString());
+
+    res.render('user', {
+      pageTitle: 'Login',
+      item:      posts[0] 
+    });
+  });
+
+
+
+//help route
+app.route('/help/?')
+  .get(function(req, res, next) {
+    var posts  = fs.readFileSync(__dirname + '/db/posts.json');
+
+    posts = JSON.parse(posts.toString());
+
+    res.render('help', {
+      pageTitle: 'Help',
+      item:      posts[10]
     });
   });
 
@@ -58,8 +89,5 @@ app.route('/?')
 
 // Start server, listen in on a port
 var server = app.listen(9000, function() {
-  console.log('server listening at http://localhost:' + server.address().port);      // lets gulp know the server has started 
+  console.log('server listening at http://localhost:' + server.address().port);      
 });
-
-
-
