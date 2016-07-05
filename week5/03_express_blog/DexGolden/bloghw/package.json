@@ -1,0 +1,24 @@
+{
+  "name": "bloghw",
+  "version": "1.0.0",
+  "description": "friday blog hw",
+  "main": "/src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hw"
+  ],
+  "author": "homework",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.1.0",
+    "gulp-live-server": "0.0.30"
+  }
+}

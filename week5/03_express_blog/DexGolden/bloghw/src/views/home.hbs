@@ -1,0 +1,22 @@
+<main>
+<ul>
+  {{#each posts}}
+    <li>  
+
+      <h3>{{this.title}}</h3>
+      <span class="label">posted by</span> {{this.author}} &#9679 {{this.publishedOn}}<br /?
+      <span class="label">Excerpt: </span><span class="excerpt">{{this.body}}</span>...[] 
+        <a href="/posts/{{@index}}">
+          <button type="submit" name="name" value="">Continue Reading</button>
+        </a>
+    </li>    
+  {{/each}}
+</ul>
+<script type="text/javascript">
+  var exVar = document.getElementsByClassName("excerpt");
+  for(var x = 0; x < exVar.length; x++){
+    exVar[x].innerText = exVar[x].innerText.substring(0,90); 
+  }      
+</script>
+
+</main>
