@@ -1,0 +1,20 @@
+h1 {
+  font-size: 50px;
+  font-family: tahoma, sans-serif;
+  color: red;
+  text-align: center;
+}
+.postsList {
+  list-style: none;
+  padding: 0;
+}
+.footnotes {
+  font-size: 16px;
+  line-height: 10px;
+}
+a {
+  font-size: 24px;
+}
+.container {
+  margin-top: 50px;
+}

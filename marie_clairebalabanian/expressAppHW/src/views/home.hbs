@@ -1,0 +1,15 @@
+<h1>My Blog</h1>
+<ul></ul>
+<ul class="postsList">
+  {{#each posts}}
+  <div class="container">
+    <li class="story">
+      <a href="/posts/{{@index}}">{{this.title}}</a>
+    </li>
+  <div class="footnotes">
+    <p>by {{this.author}}</p>
+    <p>{{this.publishedOn}}</p>
+  </div>
+  </div>
+  {{/each}}
+</ul>
