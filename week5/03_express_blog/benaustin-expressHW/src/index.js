@@ -78,6 +78,12 @@ function lineBreak(content){
   return tempString;
 }
 
+var truncDate = function(content) {
+  var shortDate = "";
+  shortDate = content.slice(4,15);
+  return shortDate;
+}
+
 
 
 // route for BLOG POSTS... Confusing!
@@ -87,17 +93,17 @@ app.route('/blogs/:id/?')   //whats it looking for here
         blogs = fs.readFileSync(__dirname + '/db/blogs.json');
 
     blogs = JSON.parse(blogs.toString()); 
-        console.log(blogs);
 
 
     res.render('readMore', {
       pageTitle: blogs[id].title,
       title: blogs[id].title,
       author: blogs[id].author,
-      publishedOn: blogs[id].publishedOn,
+      publishedOn: truncDate(blogs[id].publishedOn),
       body: lineBreak(blogs[id].body)
 
     });
+
 
   });
 
@@ -119,6 +125,11 @@ app.route('/?')
 
     });
   }) 
+
+
+
+
+
 
 // app.get('/', function(req, res, next) {
 //   res.render('home', {});

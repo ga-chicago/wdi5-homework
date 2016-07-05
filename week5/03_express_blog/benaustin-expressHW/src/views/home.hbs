@@ -1,0 +1,20 @@
+<main>
+<div class="container">
+<h2>home</h2>
+
+<p>This is my blog. View blog resources below: 
+  <br/> &nbsp; ---
+</p>
+<ol>
+  {{#each blogs}}
+      <li><a href="/blogs/{{@index}}">{{this.title}}</a> </li>
+    <ul>
+      <li>by {{this.author}} </li>
+      <li class="blurb"> {{body}}</li>
+    </ul>
+    <br/>
+  {{/each}}
+</ol>
+</div>
+
+</main>
