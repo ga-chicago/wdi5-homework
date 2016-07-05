@@ -1,34 +1,24 @@
 {
-  "name": "ga-gulp-project",
+  "name": "jack_mazanec",
   "version": "1.0.0",
-  "description": "Project outlining a gulp file for students to build on",
-  "main": "src/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/billpatrianakos/ga-gulp-project.git"
-  },
-  "author": "Jack Mazanec",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/billpatrianakos/ga-gulp-project/issues"
-  },
-  "homepage": "https://github.com/billpatrianakos/ga-gulp-project#readme",
+  "description": "> Simple Express app used to teach Gulp and why it's useful",
+  "main": "gulpfile.js",
+  "dependencies": {},
   "devDependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "express-handlebars": "^3.0.0",
+    "fs": "0.0.2",
     "gulp": "^3.9.1",
-    "gulp-jshint": "^2.0.1",
     "gulp-less": "^3.1.0",
-    "gulp-live-server": "0.0.29",
+    "gulp-live-server": "0.0.30",
     "hbs": "^4.0.0",
-    "jshint": "^2.9.2",
-    "jshint-stylish": "^2.2.0"
+    "l": "0.0.1",
+    "nodemon": "^1.9.2"
   },
-  "dependencies": {
-    "express": "^4.13.4"
-  }
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jack Mazanec <jmazane1@nd.edu>",
+  "license": "MIT"
 }

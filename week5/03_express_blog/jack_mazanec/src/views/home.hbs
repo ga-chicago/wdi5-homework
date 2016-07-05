@@ -1,1 +1,15 @@
-This is the homepage
+<h1>Blogs</h1>
+<ul>
+  {{#each blogs}}
+    <h2>{{this.title}}</h2>
+    <div>
+      {{this.publishedOn}}
+    </div>
+    <div>
+      {{this.author}}
+    </div>
+    <div>
+      {{this.body}} <a href="/blogs/{{@index}}">More info</a>
+    </div>
+  {{/each}}
+</ul>

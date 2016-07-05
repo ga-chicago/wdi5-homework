@@ -1,48 +1,59 @@
-// Server
-// Require dependencies
+// Main Server File
+// ================
+// Responsible for configuring, 
+// starting, and running the server.
 
+// Require the dependencies
 var express = require('express'),
-    data    = require('./data.json'),
-    exphbs    = require('express-handlebars'),
-    bodyParser    = require('body-parser'),
-    app     = express();
+    app     = express(),
+    exphbs  = require('express-handlebars'),
+    fs      = require('fs');
 
-
-// Configure settings and middleware
-app.use(express.static(__dirname + '/public')); // Enable serving static files
-
-
+// Configuring the applicartion
 app.engine('hbs', exphbs({
-  defaultLayout: 'default',
-  extname: '.hbs',
-  layoutsDir: __dirname + '/views/layouts/',
-  partialsDir: __dirname + '/views/partials/'
+  defaultLayout:  'main',
+  partialsDir:    __dirname + '/views/partials',
+  layoutsDir:     __dirname + '/views/layouts',
+  extname:        '.hbs'
 }));
-
 app.set('view engine', 'hbs');
-app.set('views', __dirname + '/views/');
+app.set('views', __dirname + '/views');
+
+// Configure serving static assets
+app.use(express.static(__dirname + '/public')); 
+
+// Define home page
+app.route('/blogs')
+  .get(function(req, res, next) {
+    var blogs = fs.readFileSync(__dirname + '/db/blogs.json');
+
+    res.render('home', {
+      pageTitle:  'Homepage',
+      blogs:      JSON.parse(blogs.toString())
+    });
+  })
+  .post(function(req, res, next) {
+    // response here
+  })
+
+app.route('./blogs/:id')
+  .get(function(req, res, next) {
+    var id    = parseInt(req.params.id),
+        blogs = fs.readFileSync(__dirname + '/db/blogs.json');
+    // turns todos into string parsed into a pojo
+    blogs = JSON.parse(blogs.toString()); // Turn todos file into JS object
 
 
-app.use(express.static(__dirname + '/public')); // Enable serving static files
 
-app.use(bodyParser.json())// supports json encoded bodies
-app.use(bodyParser.urlencoded({extended: true}))// supports encoded bodies
+    res.render('detail', {
+      pageTitle:  blogs[id].title,
+      author:     blogs[id].author,
+      blog:      blogs[id].body
 
-// GET /
-app.get('/?', function(req, res, next) {
-  res.sendFile(__dirname + '/public/index.html');
-});
+    });
+  });
 
-app.get('/home', function(req, res, next) {
-  res.render('home', {})
-});
-
-
-
-
-console.log('What is boyy  going on?');
-
-// Server startup
+// Start server, listen in on a port
 var server = app.listen(3000, function() {
-  console.log('Gulp app started at http://locahost:' + server.address().port);
+  console.log('Server listening at http://localhost:' + server.address().port);
 });
