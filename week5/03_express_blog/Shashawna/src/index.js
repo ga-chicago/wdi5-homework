@@ -15,7 +15,7 @@ app.set('views', __dirname + '/views');
 // Configure serving static assets
 app.use(express.static(__dirname + '/public'));
 
-// Define the todos route
+// Define the blog route
 
 app.route('/blogpost/:id/?')
   .get(function(req, res, next) {
