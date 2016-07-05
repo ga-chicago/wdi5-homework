@@ -1,0 +1,13 @@
+body {
+  background: purple;
+}
+h1,
+p {
+  font-family: sans-serif;
+  font-size: 25px;
+}
+.pic {
+  height: 25%;
+  width: 50%;
+  margin: 2%;
+}
