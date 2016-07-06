@@ -1,0 +1,9 @@
+
+<h1>Suspects List</h1>
+<ul>
+  {{#each suspects}}
+    <li>
+    {{this.pageTitle}} <a href="/suspects/{{@index}}">{{this.name}}</a>
+    </li>
+  {{/each}}
+</ul>
