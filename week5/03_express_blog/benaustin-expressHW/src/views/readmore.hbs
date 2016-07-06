@@ -1,0 +1,18 @@
+<!--unlike example, I don't need blogs.title. just title works. I was expecting that 'this' would be needed. it works, but isn't needed. -->
+<main>
+
+{{>aside}}
+
+    <div class="container">  
+    <h2>{{title}}</h2>
+
+    <p> 
+      by {{author}} <br/>
+      <small>{{publishedOn}}</small>
+    </p>
+
+    <p class="mainArticle">
+      {{{body}}}
+    </p>
+  </div> 
+</main>

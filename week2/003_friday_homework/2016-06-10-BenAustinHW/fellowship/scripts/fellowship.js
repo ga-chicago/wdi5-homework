@@ -262,6 +262,7 @@ var theBalrog = function () {
   //console.log(lis);
   //console.log(lis[0]);
 
+
   lis[0].innerHTML="Gandalf the White";
   lis[0].style.backgroundColor="ghostwhite";
   lis[0].style.border="5px grey solid";
