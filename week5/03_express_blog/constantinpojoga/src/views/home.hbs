@@ -1,0 +1,20 @@
+
+<h1>My blog</h1>
+<ul>
+  {{#each blog}}
+    <li>
+        <a href="/blog/{{@index}}">Title: <strong>{{this.title}}</strong></a>
+        <p>Author: <strong>{{this.author}}</strong></p>
+        <p>{{this.date }}</p>
+        <p>{{this.excerp}}</p>
+    </li>
+  {{/each}}
+<form>
+  
+</form>
+
+
+</ul>
+
+
+
