@@ -1,0 +1,24 @@
+{
+  "name": "benaustin75hw",
+  "version": "0.0.1",
+  "description": "controller homework for july 5",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "homework",
+    "controllers"
+  ],
+  "author": "ben austin <benjaminboydaustin@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.1.0",
+    "gulp-live-server": "0.0.30"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0"
+  }
+}
