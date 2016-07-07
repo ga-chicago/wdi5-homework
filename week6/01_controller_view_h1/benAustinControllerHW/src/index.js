@@ -1,7 +1,12 @@
 var express = require('express'),
     app     = express(),
     exphbs  = require('express-handlebars'),
-    fs      = require('fs');
+    fs      = require('fs'),
+    bodyP   = require('body-parser');
+
+app.use(bodyP.json()); //supports json encoded bodies
+app.use(bodyP.urlencoded({extended:true})); //supports encoded bodies
+
 
 app.engine('hbs', exphbs({
     defaultLayout: 'main',
@@ -22,6 +27,7 @@ app.route('/?')
     });
   })
 
+
 app.route('/suspects')
   .get(function(req, res, next) {
     var suspects = fs.readFileSync(__dirname + '/db/suspects.json');
@@ -33,18 +39,32 @@ app.route('/suspects')
   })
 
 
-app.get('/contact', function(req, res, next) {
-  res.render('contact', {});
-})
-app.post('/contact', function(req, res, next) {
-  // res.send('Thank you, ' + req.body.contactName + '<br/>' + arr + '<br/> <a href="/location-contact">back</a>')
-  res.redirect('/');
-})
+
+
+
+// app.post('/contact/?', function(req, res, next) {
+
+//   console.log(req.body);
+//   // res.send('Thank you, ' + req.body.contactName + '<br/>' + arr + '<br/> <a href="/location-contact">back</a>')
+//   res.send('request received');
+// })
+
+// app.get('/contact/?', function(req, res, next) {
+//   res.render('contact', {});
+// })
+
+
+
+
+
+
 
 
 // app.use('/suspects', require('./controllers/suspectsList'));
+app.use('/contact', require('./controllers/contact'));
 
-app.use('/suspects/?', require('./controllers/suspects'));
+app.use('/suspects/?', require('./controllers/suspects')); 
+//every URL in this linked controller will start with /suspects/ 
 
 
 var server = app.listen(3000, function() {
