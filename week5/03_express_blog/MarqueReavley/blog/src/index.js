@@ -35,7 +35,8 @@ app.route('/posts/:id/?')
 
     res.render('postview', {
       pageTitle: posts[id].name,
-      post:      posts[id]
+      post:      posts[id],
+      excerpt:   posts[id].substring(0,150) + "..."
     })
   });
 
@@ -47,7 +48,7 @@ app.route('/postlist')
     
     res.render('postlist', {
       pageTitle: 'posts',
-      posts: JSON.parse(posts.toString())
+      posts: JSON.parse(posts.toString()) 
     })
 
   })
@@ -68,19 +69,13 @@ app.route('/about')
 app.route('/?')
   .get(function(req, res, next) {
     var posts    = fs.readFileSync(__dirname + '/db/posts.json'),
-        postArr  = JSON.parse(posts.toString()),
-        featured = postArr[Math.floor(Math.random() * (postArr.length + 1))];
-        console.log("-------------------------------------------------------")
-        console.log(featured)
-        console.log("-------------------------------------------------------")
-        console.log(featured.title);
-        console.log(featured.body.substring(0,20));
-        console.log("-------------------------------------------------------")
-    
-
+        postArr  = JSON.parse(posts.toString())
+            
     res.render('home', {
       pageTitle: 'Homepage',
       posts:     JSON.parse(posts.toString()),
+      postArr:   postArr,
+      featured:  postArr[Math.floor(Math.random() * (postArr.length + 1))],
     })
   });
 
