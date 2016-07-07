@@ -1,0 +1,20 @@
+ <h1>Homepage: Post Listings</h1>
+<ul>
+  {{#each posts}}
+    <li>     
+      <span class="label">Author:</span> {{this.author}} <br />
+      <span class="label">Title:</span> {{this.title}}<br />
+      <span class="label">Date:</span> {{this.publishedOn}}<br />
+      <span class="label">Excerpt: </span><span class="excerpt">{{this.body}}</span>...[] 
+        <a href="/posts/{{@index}}">
+          <input type="button" name="name" value="Continue reading">
+        </a>
+    </li>    
+  {{/each}}
+</ul>
+<script type="text/javascript">
+  var exVar = document.getElementsByClassName("excerpt");
+  for(var x = 0; x < exVar.length; x++){
+    exVar[x].innerText = exVar[x].innerText.substring(0,50); 
+  }      
+</script>
