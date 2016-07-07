@@ -1,0 +1,13 @@
+body {
+  background: purple;
+}
+h1 {
+  text-align: center;
+}
+h2 {
+  text-align: left;
+  color: gray;
+}
+a {
+  color: gray;
+}
