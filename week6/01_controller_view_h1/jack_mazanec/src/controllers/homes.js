@@ -2,9 +2,12 @@
 
 var express = require('express'),
     Home   = express.Router(),
-    fs      = require('fs');
+    fs      = require('fs'),
+    bodyParser = require('body-parser');
 
-Home.route('/?')
+
+
+Home.route('/home')
 
   .get(function(req, res, next) {
     var people = fs.readFileSync(__dirname + '/../db/people.json');
@@ -13,6 +16,15 @@ Home.route('/?')
       pageTitle:  'People',
       people: JSON.parse(people.toString())
     });
+  })
+
+
+  .post(function(req, res, next){
+
+    var searchReq = req.body.search;
+
+    res.render('detail');
+
   })
 
 
