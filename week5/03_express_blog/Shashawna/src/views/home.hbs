@@ -1,0 +1,14 @@
+<h1>Shashawna's Blah Blah Blog</h1>
+
+<ul>
+  {{#each blogpost}}
+    <li>
+      
+      <h2><a href="/blogpost/{{@index}}">{{this.title}}</a></h2>
+        {{excerpt}}
+        <h4>By {{this.author}}</h4>
+        <h4>{{this.publishedOn}}</h4>
+    </li>
+  {{/each}}
+</ul>
+
