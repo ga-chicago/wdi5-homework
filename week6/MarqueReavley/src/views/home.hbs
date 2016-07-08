@@ -1,0 +1,16 @@
+
+<h2>Who would you like to find today?</h2>
+
+<form method="post" action="/searched">
+  <label>Name: </label>
+  <input type="text" value="" name="name" placeholder="Look for...">
+  <button value="search">Find this person!</button>
+</form>
+
+<h2>Or, you can be a little more adventurous...</h2>
+
+<form method="post" action="/random">
+  <button type="submit" name="submit" value="">Give me a random person!</button>
+</form>
+
+<p>{{person}}</p>

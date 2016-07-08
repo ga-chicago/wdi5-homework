@@ -92,7 +92,7 @@ app.route('/blogs/:id/?')   //whats it looking for here
     var id    = parseInt(req.params.id),   // not sure I understand params
         blogs = fs.readFileSync(__dirname + '/db/blogs.json');
 
-    blogs = JSON.parse(blogs.toString()); 
+        blogs = JSON.parse(blogs.toString()); 
 
 
     res.render('readMore', {
@@ -100,7 +100,9 @@ app.route('/blogs/:id/?')   //whats it looking for here
       title: blogs[id].title,
       author: blogs[id].author,
       publishedOn: truncDate(blogs[id].publishedOn),
-      body: lineBreak(blogs[id].body)
+      body: lineBreak(blogs[id].body),
+      blogs: blogs
+
 
     });
 

@@ -1,0 +1,91 @@
+@bgColor: #8D99AE;
+@centerColor: #8D99AE;
+@titleColor: #8F233C;
+@textColor: #2B2D42;
+@offWhite: #EDF2F4;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: @textColor;
+}
+
+main {
+  margin: 0 8%;
+  background: @centerColor;
+  // background-color: pink;
+  border: 1px solid @offWhite;
+  border-radius: 15px;
+
+}
+
+// .row {
+//   display: inline;
+// }
+
+.col4 {
+  display: inline-block;  
+  margin: 3% 0;
+  width: 25%;
+color: @offWhite;
+  background-color: @titleColor;
+  border: 2px solid @textColor;
+  text-align: center;
+
+  &:first-child{
+            margin-left: 10%;             
+        }
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.label {
+  font-style: italic;
+
+}
+
+h1 {
+  color: @titleColor;
+}
+
+h3 {
+  margin-bottom: 5px;
+  color: @titleColor;
+}
+
+a {
+  &:visited, &:link {
+    color: @offWhite;
+  }
+
+  &:hover {
+    background-color: @bgColor;
+  }
+}
+
+
+
+button {
+  border-radius: 12px;
+  color: @offWhite;
+  background-color: @textColor;
+  border: 2px solid @titleColor;
+}
+
+button:hover {
+  cursor: pointer;
+  border-radius: 6px;
+  color: @offWhite;
+  background-color: @titleColor;
+  border: 2px solid @textColor;
+  }
+
+

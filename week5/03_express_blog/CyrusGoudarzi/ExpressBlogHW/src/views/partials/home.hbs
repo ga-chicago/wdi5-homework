@@ -1,0 +1,21 @@
+
+<h1>Index</h1>
+
+<ul>
+  {{#each bloghw}}
+    <li>
+    <a href="/bloghw/{{@index}}"><h3>{{this.title}}</h3></a>
+    <p>
+    <h5>{{this.author}}</h5>
+    <h6>{{this.publishedOn}}</h6>
+    </p>
+    </li>
+  {{/each}}
+
+</ul>
+
+
+
+
+
+

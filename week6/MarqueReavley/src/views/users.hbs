@@ -1,0 +1,8 @@
+
+<ul>
+  {{#each users}}
+    <li>
+      <h4>{{this.name}}</h4><form method="post" action="/users/details"><button>Full Details</button></form>
+    </li>
+  {{/each}}
+</ul>
