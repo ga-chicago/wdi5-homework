@@ -1,0 +1,14 @@
+<h1>Here's a contact list of some folkss</h1>
+<div>
+  <ul class="contactList">
+    {{#each contacts}}
+    <div class="contactItem">
+     <li><h4>{{this.name}}</h4></li>
+     <h5>{{this.company}}</h5>
+     <p>{{this.phone}}</p>
+     <p>{{this.email}}</p>
+      <p>{{this.address}}</p>
+    </div>
+  {{/each}}
+  </ul>
+</div>
