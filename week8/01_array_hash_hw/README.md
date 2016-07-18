@@ -12,6 +12,10 @@ Tonight's homework is simple. Take the JSON object provided to you here as a str
 4. Feel free to do something interesting like adding your own entries
 5. After each post, create a couple of separator lines
 
+__Turning it in:__ As always, create a folder in here that is named after yourself before turning it in.
+
+__HINT: You may need to look up how to parse JSON into a data type that Ruby understands!__ Google is your friend. The rest is stuff that we specifically covered today in class.
+
 The final output should look like what's shown below:
 
 ```shell
