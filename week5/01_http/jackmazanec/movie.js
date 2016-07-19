@@ -1,6 +1,12 @@
 
 var http  = require('http');
 
+
+
+function printError(error) {
+  console.error(error.message)
+}
+
 function getMovie(movie) {
 
   var request = http.get('http://www.omdbapi.com/?t=' + movie + '&y=&plot=short&r=json', function(response) {
@@ -23,7 +29,7 @@ function getMovie(movie) {
     })
 
   })
-
+  request.on('error', printError);
 }
 
 module.exports.get = getMovie;

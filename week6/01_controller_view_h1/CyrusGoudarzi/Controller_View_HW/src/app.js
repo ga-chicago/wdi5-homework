@@ -19,7 +19,11 @@ app.set('views', __dirname + '/views');
 
 app.use(express.static(__dirname + '/public'));
 
+<<<<<<< HEAD
 app.use('/route1/', require('./controllers/route1'))
+=======
+
+>>>>>>> 12bb0b19b54eccbdd8a83710ff9380dd92261ec8
 app.use('/users/', require('./controllers/users'))
 
 var data = {
