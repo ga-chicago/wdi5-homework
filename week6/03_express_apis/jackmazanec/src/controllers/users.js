@@ -7,6 +7,23 @@ var express     = require('express'),
     mongoose    = require('mongoose'),
     User        = require('../models/user');
 
+Users.route('/input')
+  // get method--displays user's specific object
+  .get(function(req, res, next) {
+    // so for this portion, User, which is the inbetween between the data base and 
+    // javascript, finds what....
+
+        res.render('form')
+    })
+  .post(function(req, res, next) {
+    User.create(req.body, 
+        function(err,user) {
+          if (err) {
+            console.log(err)
+          } else {res.json(user);
+        }      
+    })
+  });
 // now to set some of the routes
 // route to specific user using mongoose id
 Users.route('/:id')
@@ -60,21 +77,21 @@ Users.route('/')
         console.log(users)
       }
     }) 
-  })
-  // post method--adds new user
-  .post(function(req, res, next) {
-      User.create({name: 'Beans',
-                   race: 'Black',
-                   age:   4,
-                   eyecolor: 'brown',
-                   gender: 'female'}, 
-        function(err,user) {
-          if (err) {
-            console.log(err)
-          } else {
-            res.json(user);
-          }
-      })
   });
+  // // post method--adds new user
+  // .post(function(req, res, next) {
+  //     User.create({name: 'Beans',
+  //                  race: 'Black',
+  //                  age:   4,
+  //                  eyecolor: 'brown',
+  //                  gender: 'female'}, 
+  //       function(err,user) {
+  //         if (err) {
+  //           console.log(err)
+  //         } else {
+  //           res.json(user);
+  //         }
+  //     })
+  // });
 
 module.exports = Users
