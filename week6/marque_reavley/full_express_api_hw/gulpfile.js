@@ -14,7 +14,7 @@ var gulp = require('gulp'),
 gulp.task('less', function() {
   gulp.src('./src/public/less/style.less')
     .pipe(less())
-    .pipe(gulp,dest('./src/public/css'));
+    .pipe(gulp.dest('./src/public/css'));
 });
 
 //  (TASK) Run the local server
