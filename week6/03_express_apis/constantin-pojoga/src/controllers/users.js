@@ -54,10 +54,10 @@ Users.route('/?')
   .post(function(req, res, next) {
     console.log(req.body);
     User.create(req.body, function(err, users) {
-      console.log(users);
-      res.json(users);
-    })
-  })
+       if (err) return next(err);
+    res.json(users);
+    });
+  });
 
 module.exports = Users;
 

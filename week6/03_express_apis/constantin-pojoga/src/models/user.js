@@ -6,7 +6,7 @@ var UsersSchema = new mongoose.Schema({
   age:      Number,
   position: String,
   location: String
-});
+}, {strict: false});
 
 
 // We a declaring User as the new model name and assigning the schema to this model

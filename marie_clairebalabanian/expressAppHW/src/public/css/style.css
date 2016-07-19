@@ -18,3 +18,6 @@ a {
 .container {
   margin-top: 50px;
 }
+.nav {
+  list-style: none;
+}
