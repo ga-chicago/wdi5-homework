@@ -7,7 +7,10 @@ UsersController.route('/:id/?')
     var id = req.params.id;
 
     res.send('User ID is ' + id);
+<<<<<<< HEAD
+=======
     
+>>>>>>> 12bb0b19b54eccbdd8a83710ff9380dd92261ec8
   })
   .post(function(req, res, next) {
     res.json({
@@ -27,5 +30,8 @@ UsersController.route('/:id/?')
     });
   });
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 12bb0b19b54eccbdd8a83710ff9380dd92261ec8
   module.exports = UsersController;
