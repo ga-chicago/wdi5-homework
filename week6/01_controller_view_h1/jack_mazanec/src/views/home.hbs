@@ -1,0 +1,14 @@
+<h1>people</h1>
+<form action="/home" method="post" accept-charset="utf-8">
+  <label>Search</label>
+  <input type="text" name="search" value="">
+  <button type="submit">search</button>
+</form>
+<ul>
+  {{#each people}}
+    <h2>{{this.name}}</h2>
+<a href="/detail/{{@index}}">More info</a>
+
+  {{/each}}
+</ul>
+

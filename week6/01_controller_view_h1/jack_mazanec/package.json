@@ -1,0 +1,24 @@
+{
+  "name": "jack_mazanec",
+  "version": "1.0.0",
+  "description": "> Simple Express app used to teach Gulp and why it's useful",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "fs": "0.0.2",
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.1.0",
+    "gulp-live-server": "0.0.30",
+    "hbs": "^4.0.0",
+    "l": "0.0.1",
+    "nodemon": "^1.9.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jack Mazanec <jmazane1@nd.edu>",
+  "license": "MIT"
+}
