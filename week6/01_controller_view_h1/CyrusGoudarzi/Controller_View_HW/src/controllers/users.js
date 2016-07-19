@@ -7,6 +7,7 @@ UsersController.route('/:id/?')
     var id = req.params.id;
 
     res.send('User ID is ' + id);
+    
   })
   .post(function(req, res, next) {
     res.json({
@@ -25,5 +26,6 @@ UsersController.route('/:id/?')
       message: 'New user created'
     });
   });
+
 
   module.exports = UsersController;

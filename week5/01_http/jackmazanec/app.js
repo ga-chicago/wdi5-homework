@@ -1,6 +1,6 @@
 var movie = require('./movie');
 
-var movies = ["forrest Gump", "Shawshank", "k-pax"]
+var movies = ["forrest Gump", "Shawshank", "k-pax"];
 
 
 
