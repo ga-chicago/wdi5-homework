@@ -3,6 +3,7 @@ var express = require('express'),
     app     = express(),
     exphbs  = require('express-handlebars'),
     fs      = require('fs');
+    bodyParser = require('body-parser');
 
 
 // Configure the app
@@ -16,8 +17,9 @@ app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 
 
-// Configure serving static assets
+// Configure serving static assets (THIS IS MIDDLEWARE)
 app.use(express.static(__dirname + '/public'));
+// documentation read
 
 
 
@@ -27,14 +29,14 @@ require('./models/db');
 
 
 
-// Mount all middleware routes
+// Controllers - USING AS MIDDLEWARE
 app.use('/users/?', require('./controllers/users')); 
 
 
 // Define home page
 app.route('/?')
   .get(function(req, res, next) {
-      res.render('home', {});
+      res.render('form', {});
   });
 
 

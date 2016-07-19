@@ -1,5 +1,5 @@
 var express   = require ('express'),
-    Users       = express.Router(),
+    Users     = express.Router(),
     fs        = require('fs'),
     mongoose  = require('mongoose'),
     User      = require('../models/user')
@@ -14,9 +14,9 @@ Users.route('/?')
     res.json(users)
   })
 })
-  .post(function(req, res) {
-    User.create({username: 'Bob', password: '12343', email: 'bob@bob.com', gender: 'female'}, function(err, user) {
-      console.log(user)
+  .post(function(req, res, next) {
+    User.create(req.body, function(err, user) {
+      console.log(req.body)
       res.json(user)
     })
 });
