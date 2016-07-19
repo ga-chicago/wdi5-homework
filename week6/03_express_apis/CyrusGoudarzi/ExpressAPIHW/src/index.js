@@ -3,6 +3,16 @@ var express = require('express'),
     exphbs  = require('express-handlebars'),
     fs      = require('fs');
 
+app.engine('hbs', exphbs({
+  defaultLayout: 'main',
+  partialsDir:   __dirname + '/views/partials',
+  layoutsDir:    __dirname + '/views/layouts',
+  extname:           '.hbs'
+}));
+app.set('view engine', 'hbs');
+app.set('views', __dirname + '/views');
+
+
 app.use(express.static(__dirname + '/public'));
 
 

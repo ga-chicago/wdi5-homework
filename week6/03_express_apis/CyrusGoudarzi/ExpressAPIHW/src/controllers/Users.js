@@ -12,14 +12,14 @@ Users.route('/:id/')
   var id = req.params.id;
   //use find method of mongoose
     User.find(function(err, Users) {
-      res.json(Users)
+      res.render('info')
     })
   })
   //PUT method
   .put(function(req, res) {
   //define the id
   var id  = req.params.id;
-    User.findByIdAndUpdate(id, { name: "The Rolling Stones" }, function(err, User) {
+    User.findByIdAndUpdate(id, { name: "David Bowie" }, function(err, User) {
       if (err) {
         console.log(err)
       } else {
