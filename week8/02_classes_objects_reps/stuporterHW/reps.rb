@@ -6,6 +6,9 @@
 # PROBLEM 1
 #############
 
+
+
+
 words = ["hello", "what", "is", "up", "dude"]
 
 def lengths(words)
@@ -15,6 +18,14 @@ def lengths(words)
 end
 
 lengths(words)
+
+
+
+
+
+
+
+
 
 # PROBLEM 2
 #############################
@@ -26,6 +37,16 @@ end
 transmogrifier(5, 4, 3)
 transmogrifier(13, 12, 5)
 transmogrifier(42, 13, 7)
+
+
+
+
+
+
+
+
+
+
 
 # PROBLEM 3
 #############################
@@ -50,6 +71,12 @@ end
 toonify("daffy", "so you smell like sausage")
 toonify("elmer", "rrrrrrr")
 
+
+
+
+
+
+
 # PROBLEM 4
 #############################
 
@@ -62,6 +89,12 @@ end
 
 
 wordReverse("I want a toy car for my birthday")
+
+
+
+
+
+
 
 # PROBLEM 5
 #############################
@@ -76,7 +109,13 @@ def letterReverse(string)
   p string
 end  
 
-letterReverse("Something tells me it'll be a good day")
+letterReverse("This Is Backwards")
+
+
+
+
+
+
 
 # PROBLEM 6
 #############################
@@ -91,5 +130,5 @@ def longest(array)
   p longest_word
 end  
 
-longest(["oh", "good", "grief"]) # => "grief"
+longest(["bacon", "toast", "omelets"]) 
 longest(["Nothing" , "takes", "the", "taste", "out", "of", "peanut", "butter", "quite", "like", "unrequited", "love"])
