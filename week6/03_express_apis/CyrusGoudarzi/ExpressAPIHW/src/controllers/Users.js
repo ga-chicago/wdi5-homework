@@ -12,14 +12,22 @@ Users.route('/:id/')
   var id = req.params.id;
   //use find method of mongoose
     User.find(function(err, Users) {
+<<<<<<< HEAD
       res.json(Users)
+=======
+      res.render('info')
+>>>>>>> 12bb0b19b54eccbdd8a83710ff9380dd92261ec8
     })
   })
   //PUT method
   .put(function(req, res) {
   //define the id
   var id  = req.params.id;
+<<<<<<< HEAD
     User.findByIdAndUpdate(id, { name: "The Rolling Stones" }, function(err, User) {
+=======
+    User.findByIdAndUpdate(id, { name: "David Bowie" }, function(err, User) {
+>>>>>>> 12bb0b19b54eccbdd8a83710ff9380dd92261ec8
       if (err) {
         console.log(err)
       } else {
