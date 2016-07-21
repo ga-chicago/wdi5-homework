@@ -1,0 +1,72 @@
+#!/usr/bin/env ruby
+
+
+#############################
+
+def lengths(array) 
+  array.each do |word|
+    puts word.length
+  end
+end
+
+hello_array = ['hello', 'what', 'is', 'up', 'dude']
+lengths(hello_array)
+
+#############################
+
+def transmogrifier(num1, num2, num3)
+  puts (num1 * num2) ** num3
+end
+
+transmogrifier(5,3,2)
+transmogrifier(13, 12, 5)
+transmogrifier(42, 13, 7)
+
+#############################
+
+def toonify(accent, sentence)
+  # puts sentence.tr('s', 'th') # kind of works
+  if accent == 'sylvester'
+    puts sentence.gsub('s', 'th') # why usually a regular expression?
+  elsif accent == 'elmer'
+    puts sentence.gsub('r', 'w')
+  else 
+    puts sentence
+  end
+end
+
+toonify('elmer', 'writing the right response')
+toonify('sylvester', 'she sells seashells')
+
+#############################
+
+def word_reverse(string)
+   puts string.split.reverse.join(" ")
+end
+
+word_reverse("hello my name is ben")
+
+#############################
+
+def letter_reverse(string)
+  puts string.reverse.split.reverse.join(" ")
+end
+
+letter_reverse("good evening ladies and gentlemen")
+
+#############################
+
+def longest(array)
+  the_longest = array[0]
+  array.each do |value|
+    if value.length > the_longest.length
+      the_longest = value
+    end
+  end
+  puts the_longest
+end
+
+longest(["oh", "good", "grief", "man"])
+
+
+
