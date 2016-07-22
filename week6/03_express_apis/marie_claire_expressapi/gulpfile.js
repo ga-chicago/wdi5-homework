@@ -13,7 +13,7 @@ gulp.task('less', function() {
 
 // Run a local server
 gulp.task('server', function() {
-  var server = gls('./src/index.js', {NODE_ENV: 'development', PORT: 9000});
+  var server = gls('./src/index.js', {NODE_ENV: 'development', PORT: 3001});
   server.start(); 
 
   gulp.watch(['gulpfile.js', './src/index.js', './src/controllers/**/*.js'], function() {

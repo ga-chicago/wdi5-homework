@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');   //using a mongodb database
 
-var connectionString = 'mongodb://localhost/usersss';
+var connectionString = 'mongodb://localhost/usersss'; //"usersss" sets database name
 
 mongoose.connect(connectionString);
 

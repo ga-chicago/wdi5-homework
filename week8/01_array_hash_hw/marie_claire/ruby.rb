@@ -1,50 +1,6 @@
-# Week 8 - Monday Homework
+require 'json'
 
-> Using array and hash methods
-
-Tonight's homework is simple. Take the JSON object provided to you here as a string, parse it into a Ruby hash, and iterate over it so that you can see each value stored in the hash. The data represents blog posts. So you're basically creating the front page of a blog except output to the terminal.
-
-## Steps to complete (with hints!)
-
-1. Turn JSON string into array of Ruby hashes using the JSON gem
-2. Iterate over the array
-3. Only post entries that have an even numbered `id` number
-4. Feel free to do something interesting like adding your own entries
-5. After each post, create a couple of separator lines
-
-<<<<<<< HEAD
-=======
-__Turning it in:__ As always, create a folder in here that is named after yourself before turning it in.
-
-__HINT: You may need to look up how to parse JSON into a data type that Ruby understands!__ Google is your friend. The rest is stuff that we specifically covered today in class.
-
->>>>>>> 12bb0b19b54eccbdd8a83710ff9380dd92261ec8
-The final output should look like what's shown below:
-
-```shell
-Some Title
-==========
-
-The body of the post here...
-
-------------------
-By The Author Name
-------------------
-
-Next post title
-===============
-
-...
-```
-
-Notice how you'll be separating the values using a combination of newlines characters and long strings of dashes or euqal signs.
-
-## The test data
-
-Here is the data you'll use the complete the assignment
-
-```json
-[
+data = '[
   {
     "id": 14,
     "title": "Cupidatat ut sunt elit ut tempor aliqua sit ipsum enim aliquip veniam Lorem proident eu.",
@@ -164,5 +120,22 @@ Here is the data you'll use the complete the assignment
     "author": "Farrell Sears",
     "publishedOn": "Wed Dec 16 2015 13:18:30 GMT-0600 (CST)"
   }
-]
-```
+]'
+
+
+posts = JSON.parse(data)
+
+# number hashes in array
+puts posts.length
+
+# using the ! means the posts array gets changed in place. we don't have to create new variable or new copy. overwrites original variable
+posts.select! { |post| post['id'] % 2 == 0 }
+
+posts.each do |post|
+  puts "*** #{post['title']} ***"
+  puts "Written by #{post['author']} on #{post['publishedOn']}"
+  puts puts "\n"
+  puts "#{post['body']}"
+  puts "\n -------------------------- \n"
+  puts "\n"
+end
