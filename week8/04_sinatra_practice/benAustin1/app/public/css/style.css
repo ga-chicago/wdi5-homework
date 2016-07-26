@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  margin-top: 1%;
+  padding: 0;
+  background-color: lightgrey;
+  font-family: 'VT323', monospace;
+}
+div {
+  position: relative;
+  border: 3px #00B1DD solid;
+  padding: 1%;
+  border-radius: 2%;
+  width: auto;
+  width: 300px;
+  margin: 0 auto;
+  z-index: 2;
+}
