@@ -1,0 +1,63 @@
+@black: #666666;
+@white: #e6e6e6;
+@red: #F41F83;
+@blue: #00B1DD;
+
+body {
+  margin: 0;
+  margin-top: 1%;
+  padding: 0;
+  background-color: lightgrey;
+  font-family: 'Slabo 13px', serif;
+}
+
+h1, h2 {
+  text-align: center;
+  margin: 1px;
+}
+
+h2:before {
+  content: "----";
+  color: @red;
+}
+
+h2:after {
+  content: " ----";
+  color: @red;
+}
+
+p {
+  margin: 0;
+}
+div {
+  position: relative;
+  border: 3px @blue solid;
+  padding: 1%;
+  border-radius: 2%;
+  max-width: 400px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+fieldset{ 
+  border: 2px dotted @blue;
+  margin: 20px auto;
+  max-width: 300px;
+  }
+
+legend {  
+  font-size: 20px;
+  color: @red;
+  padding: 5px;
+}
+
+// div:before {
+//   content: "";
+//   display: block;
+//   position: absolute;
+//   border: 3px @red solid;
+//   max-width: 300px;
+//   left: 10px;
+//   top: 10px;
+//   z-index: 3;
+// }

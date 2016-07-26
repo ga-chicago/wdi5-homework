@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  margin-top: 1%;
+  padding: 0;
+  background-color: lightgrey;
+  font-family: 'Slabo 13px', serif;
+}
+h1,
+h2 {
+  text-align: center;
+  margin: 1px;
+}
+h2:before {
+  content: "----";
+  color: #F41F83;
+}
+h2:after {
+  content: " ----";
+  color: #F41F83;
+}
+p {
+  margin: 0;
+}
+div {
+  position: relative;
+  border: 3px #00B1DD solid;
+  padding: 1%;
+  border-radius: 2%;
+  max-width: 400px;
+  margin: 0 auto;
+  z-index: 2;
+}
+fieldset {
+  border: 2px dotted #00B1DD;
+  margin: 20px auto;
+  max-width: 300px;
+}
+legend {
+  font-size: 20px;
+  color: #F41F83;
+  padding: 5px;
+}

@@ -1,0 +1,67 @@
+@black: #666666;
+@white: #e6e6e6;
+@red: goldenrod;
+@blue: #00B1DD;
+
+body {
+  margin: 0;
+  margin-top: 1%;
+  padding: 0;
+  background-color: @black;
+  font-family: 'Slabo 13px', serif;
+  color: @white;
+}
+
+h1, h2 {
+  text-align: center;
+  margin: 1px;
+  color: @white;
+}
+
+h2:before {
+  content: "----";
+  color: @red;
+}
+
+h2:after {
+  content: " ----";
+  color: @red;
+}
+
+p {
+  margin: 0;
+}
+div {
+  position: relative;
+  border: 3px @white solid;
+  padding: 1%;
+  border-radius: 2%;
+  max-width: 400px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+fieldset{ 
+  border: 2px solid @white;
+  margin: 20px auto;
+  max-width: 300px;
+  }
+
+legend {  
+  font-size: 20px;
+  color: @red;
+  padding: 5px;
+}
+
+button {
+  text-align: center;
+  margin: 0 auto;
+  position: center;
+  width: 100px;
+  height: 40px;
+  color: @white;
+  font-size: 16px;
+  background-color: @red;
+  border: none;
+  border-radius: 3%;
+}

@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  margin-top: 1%;
+  padding: 0;
+  background-color: #666666;
+  font-family: 'Slabo 13px', serif;
+  color: #e6e6e6;
+}
+h1,
+h2 {
+  text-align: center;
+  margin: 1px;
+  color: #e6e6e6;
+}
+h2:before {
+  content: "----";
+  color: goldenrod;
+}
+h2:after {
+  content: " ----";
+  color: goldenrod;
+}
+p {
+  margin: 0;
+}
+div {
+  position: relative;
+  border: 3px #e6e6e6 solid;
+  padding: 1%;
+  border-radius: 2%;
+  max-width: 400px;
+  margin: 0 auto;
+  z-index: 2;
+}
+fieldset {
+  border: 2px solid #e6e6e6;
+  margin: 20px auto;
+  max-width: 300px;
+}
+legend {
+  font-size: 20px;
+  color: goldenrod;
+  padding: 5px;
+}
+button {
+  text-align: center;
+  margin: 0 auto;
+  position: center;
+  width: 100px;
+  height: 40px;
+  color: #e6e6e6;
+  font-size: 16px;
+  background-color: goldenrod;
+  border: none;
+  border-radius: 3%;
+}
