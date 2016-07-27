@@ -1,0 +1,19 @@
+{
+  "name": "wknd-eight-hw",
+  "version": "0.0.1",
+  "description": "Weekend 8 HW. Sinatra app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sinatra",
+    "homework"
+  ],
+  "author": "bba <benjaminboydaustin@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.1.0"
+  }
+}
