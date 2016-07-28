@@ -1,0 +1,29 @@
+require "sinatra/activerecord/rake"
+
+
+desc "Set up the environment"
+task :environment do
+  ENV['RACK_ENV'] ||= 'development'
+end
+
+
+
+ActiveRecord::Base.establish_connection(
+    :adapter => 'sqlite3',
+    :database => 'db.sqlite3'
+  )
+
+
+
+
+namespace :server do
+  desc "Start the server"  # desc for description of task
+  task :start => [:environment] do
+    # exec runs thing on the command line. you can call terminal commands from here!!!
+    exec "rerun rackup"
+  end
+end
+
+
+
+  
