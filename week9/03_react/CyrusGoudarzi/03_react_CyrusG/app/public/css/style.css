@@ -1,0 +1,56 @@
+body {
+  background-color: #20b2aa;
+}
+
+h2 {
+  width: 100%;
+  font-size: 200%;
+  margin-left: 30%;
+}
+
+.react-app {
+  width: 200%;
+  font-size: 200%;
+  margin-left: 37%;
+
+}
+
+.whale-gif {
+  margin-left: 12%;
+  border-radius: 10%;
+  animation-duration: 13s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 0%;
+
+
+  }
+
+  to {
+    margin-left: 100%;
+  }
+
+}
+
+.whale-gif-two {
+  margin-top: 20%;
+  border-radius: 10%;
+  animation-duration: 13s;
+  animation-name: slideout;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slideout {
+  from {
+    margin-left: 100%;
+
+  }
+
+  to {
+    margin-left: -10%;
+  }
+}
